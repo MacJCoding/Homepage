@@ -102,7 +102,11 @@ function descalePhoto() {
 }
 
 function scalePhoto() {
+	if(inAnimation){
   image.style = "width:" + imgScale + "%; height:" + heroImageHeight + "px";
+	}else{
+  image.style = "width:" + imgScale + "%; height:100%";
+	}
   imgScale++;
   if (imgScale > 100) {
     imgScale = 100;
@@ -308,6 +312,24 @@ function flipCard(evt) {
   }
 }
 
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		console.log(entry)
+		if(entry.isIntersecting) {
+			entry.target.classList.add('show');
+		} else {
+			entry.target.classList.remove('show');
+		}
+	});
+});
+
+document.querySelector(".home-logo").addEventListener("click", () => {
+  window.location.href = 'index.html';
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
 const left = document.querySelector("#left_arrow");
 left.addEventListener("click", preivousHero);
 const right = document.querySelector("#right_arrow");
@@ -382,8 +404,5 @@ function updateHeroImage() {
     scalePhoto();
   } else {
     descalePhoto();
-  }
-  if (!inAnimation) {
-    image.style = "width:" + imgScale + "%; height:100%";
   }
 }

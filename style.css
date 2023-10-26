@@ -39,11 +39,20 @@
   font-family: Roboto;
 }
 
-#intro {
+#welcome {
   justify-content: space-between;
-  color: white;
   padding-bottom: 50px;
   padding-top: 150px;
+  position: relative;
+  text-align: center;
+  font-size: 36px;
+  color:white;
+}
+
+#intro {
+  justify-content: space-between;
+  padding-bottom: 50px;
+  padding-top: 50px;
   position: relative;
 }
 
@@ -76,7 +85,7 @@ body {
   background-repeat: repeat;
   background-size: auto;
   background-attachment: fixed;*/
-  font-family: FreeMono;
+  background-color: #0b487f;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -110,7 +119,7 @@ iframe {
 }
 
 .section {
-	background-color: #111;
+	background-color: #112;
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
@@ -128,6 +137,17 @@ iframe {
   border-radius: 10px;
   overflow: hidden;
   color: black;
+}
+
+.welcome-container {
+	position: relative;
+  padding: 20px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .gameImg,
@@ -174,6 +194,11 @@ iframe {
   display: table;
 }
 
+.link {
+	text-decoration: none;
+	color:white;
+}
+
 .tabs {
   display: flex;
   list-style: none;
@@ -186,7 +211,7 @@ iframe {
 }
 
 .tab-icon{
-	margin-top: 10px;
+	margin: auto;
 	margin-right: 10px;
 	cursor: pointer;
 }
@@ -199,7 +224,7 @@ iframe {
   justify-content: space-between;
   height: 80px;
   width: 100%;
-  background-color: #444;
+  background-color: #113;
   color: white;
   z-index: 999;
 }
@@ -210,6 +235,7 @@ iframe {
 
 #logo {
 	padding-left: 1%;
+	cursor:pointer;
 }
 
 .back-video {

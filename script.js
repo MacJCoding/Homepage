@@ -6,13 +6,19 @@ const cardback =
 var isScrolling = false;
 var gameIndex = 0;
 var gameNames = ["Lost in The Shadows",
-				"Galactic Collector"
+				"Colordle",
+				"Galactic Collector",
+				"War Plus"
 				]
 var gameIcon = ["https://img.itch.zone/aW1nLzgyNjczMzIucG5n/347x500/QX14rU.png",
-				"https://img.itch.zone/aW1hZ2UvOTI3OTk4LzUyNDkwNDYucG5n/347x500/5KpqOi.png"
+				"https://img.itch.zone/aW1nLzk2Njc4NTkucG5n/315x250%23c/PHyxpx.png",
+				"https://img.itch.zone/aW1hZ2UvOTI3OTk4LzUyNDkwNDYucG5n/347x500/5KpqOi.png",
+				"https://img.itch.zone/aW1nLzEwMzQwNjE2LnBuZw==/315x250%23c/eoDJcQ.png"
 				]
 var gameDesc = ["Xesia's shadow is lost in the shadow dimension. Lead her back to Xesia, but you are not the only lost shadow.",
-				"Welcome to Galactic Collector, where you collect parts for your ship to become stronger.  Get parts by defeating enemies."
+				"A recreationg of Worlde but with colors and hexcodes",
+				"Welcome to Galactic Collector, where you collect parts for your ship to become stronger.  Get parts by defeating enemies.",
+				"Its war but with abilities. Since someone commented on one of my devlogs how difficult making card games could be,  I started brainstorming on some card game ideas and this is one of them. This game was made in  3 days. Hope you enjoy! "
 				]
 
 function preivousHero() {
