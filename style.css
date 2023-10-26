@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto/Roboto-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto/Roboto-SemiBold.ttf');
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto/Roboto-Italic.ttf');
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto/Roboto-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto/Roboto-BoldItalic.ttf');
+  font-style: italic;
+  font-weight: 700;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+#intro {
+  justify-content: space-between;
+  color: white;
+  padding-bottom: 50px;
+  padding-top: 150px;
+  position: relative;
+}
+
+#my-games {
+  /*background: url(https://img.itch.zone/aW1nLzk4OTgxMjQucG5n/original/amgagN.png);
+  background-repeat: repeat;
+  background-size: auto;*/
+  background: url(https://img.itch.zone/aW1nLzUyNDk1NTUucG5n/original/6Xiz6E.png);
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#my-videos {
+  
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#keywords {
+  background-color: #111;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+body {
+  /*background: url("https://img.itch.zone/aW1nLzUyNDk1NTUucG5n/original/6Xiz6E.png");
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: fixed;*/
+  font-family: FreeMono;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.4;
+  font-weight: 300;
+  margin: 0;
+}
+
+p {
+	font-size: 20px;
+}
+
+iframe {
+	width:100%;
+}
+
+.fade-in {
+	animation: fadeIn, 2s;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 0s;
+}
+
+.show {
+  opacity: 1;
+  transform: translate(0, 0);
+   transition: all 1s;
+}
+
+.section {
+	background-color: #111;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.container {
+	position: relative;
+  padding: 20px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(125, 125, 125, 0.2);
+  border: 10px solid rgba(100, 100, 255, 0.4);
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  color: black;
+}
+
+.gameImg,
+.sneakPeek {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#className {
+  text-align: center;
+}
+
+#classDesc {
+  text-align: center;
+}
+
+#left_arrow,
+#right_arrow {
+  cursor: pointer;
+}
+
+.imgColumn {
+  float: left;
+  width: 20%;
+  padding: 5px;
+  padding-top:10%;
+  padding-bottom:10%;
+  
+}
+
+.imgCenter {
+  float: left;
+  width: 60%;
+  padding: 5px;
+  transition: background-color 0.6s ease;
+}
+
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.tabs {
+  display: flex;
+  list-style: none;
+  column-gap: 10px;
+}
+
+.tab {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.tab-icon{
+	margin-top: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.nav {
+	font-size: 24px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  background-color: #444;
+  color: white;
+  z-index: 999;
+}
+
+#company-name {
+  font: 14;
+}
+
+#logo {
+	padding-left: 1%;
+}
+
+.back-video {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+
+.to-top {
+  border-radius: 26.5px;
+  background-color: #444;
+  border: 3px solid #001f61;
+  box-shadow: 0 16px 22px -17px #03153b;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 12px 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
