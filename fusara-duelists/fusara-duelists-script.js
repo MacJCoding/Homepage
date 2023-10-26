@@ -30,28 +30,28 @@ var peek3InAnimation = false;
 var peek3Flipped = false;
 
 var oCards = [
-  "https://lh3.googleusercontent.com/drive-viewer/AK7aPaB2ywOhTe2LuZ0KNPcCob-qKLAcm6WRO8mud_Mb-6_UXlior2SKk82Omfrl1UapJOOrZ3xCsBHBQ12Nvfa6CWPejmXKTg=s2560",
-  "https://lh3.googleusercontent.com/drive-viewer/AK7aPaB2ywOhTe2LuZ0KNPcCob-qKLAcm6WRO8mud_Mb-6_UXlior2SKk82Omfrl1UapJOOrZ3xCsBHBQ12Nvfa6CWPejmXKTg=s2560",
-  "https://lh3.googleusercontent.com/drive-viewer/AK7aPaB2ywOhTe2LuZ0KNPcCob-qKLAcm6WRO8mud_Mb-6_UXlior2SKk82Omfrl1UapJOOrZ3xCsBHBQ12Nvfa6CWPejmXKTg=s2560"
-];
+  "media/heroes/obsetileo.png",
+  "media/heroes/obsetileo.png",
+  "media/heroes/obsetileo.png"
+  ];
 
 var sCards = [
-  "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCdutFcAJ9vcATvjpQ7K4lsEDFbLLSOl0pgh8K3UtpJaZeq4mB97mNQVmwTl8uvo8rFiqZgQQVX0aaU5PNj5iFQKwBGxg=s2560",
-  "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCdutFcAJ9vcATvjpQ7K4lsEDFbLLSOl0pgh8K3UtpJaZeq4mB97mNQVmwTl8uvo8rFiqZgQQVX0aaU5PNj5iFQKwBGxg=s2560",
-  "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCdutFcAJ9vcATvjpQ7K4lsEDFbLLSOl0pgh8K3UtpJaZeq4mB97mNQVmwTl8uvo8rFiqZgQQVX0aaU5PNj5iFQKwBGxg=s2560"
-];
+  "media/heroes/separona.png",
+  "media/heroes/separona.png",
+  "media/heroes/separona.png"
+  ];
 
 var cCards = [
-  "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDuOhljwslshflN7TSRTXeAi60GjS5v6nYt3Z766tGZKqbgWIB41COaZHzstwNXKYI_Vv1THn-lf-iO-Q_7IKyz-8KK=s2560",
-  "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDuOhljwslshflN7TSRTXeAi60GjS5v6nYt3Z766tGZKqbgWIB41COaZHzstwNXKYI_Vv1THn-lf-iO-Q_7IKyz-8KK=s2560",
-  "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDuOhljwslshflN7TSRTXeAi60GjS5v6nYt3Z766tGZKqbgWIB41COaZHzstwNXKYI_Vv1THn-lf-iO-Q_7IKyz-8KK=s2560"
-];
+  "media/heroes/chronos.png",
+  "media/heroes/chronos.png",
+  "media/heroes/chronos.png"
+  ];
 
 var iCards = [
-  "https://lh3.googleusercontent.com/drive-viewer/AK7aPaBoFIL2BrlKveRwsQ9SP3pRHwqIpQPKq1CORhQxC3AtGwtnGR8aRjQ5TMbtHy8cFMXuRP9Tjf9cCBzWRj9WI41rtsUVxw=s1600",
-  "https://lh3.googleusercontent.com/drive-viewer/AK7aPaBoFIL2BrlKveRwsQ9SP3pRHwqIpQPKq1CORhQxC3AtGwtnGR8aRjQ5TMbtHy8cFMXuRP9Tjf9cCBzWRj9WI41rtsUVxw=s1600",
-  "https://lh3.googleusercontent.com/drive-viewer/AK7aPaBoFIL2BrlKveRwsQ9SP3pRHwqIpQPKq1CORhQxC3AtGwtnGR8aRjQ5TMbtHy8cFMXuRP9Tjf9cCBzWRj9WI41rtsUVxw=s1600"
-];
+"media/heroes/ilia.png",
+"media/heroes/ilia.png",
+"media/heroes/ilia.png"
+  ];
 
 function preivousHero() {
   if (!inAnimation) {
@@ -120,28 +120,28 @@ function setHero(index) {
     case 4:
       doc.innerHTML = "Ilia";
       image.src =
-        "https://lh3.googleusercontent.com/drive-viewer/AK7aPaBoFIL2BrlKveRwsQ9SP3pRHwqIpQPKq1CORhQxC3AtGwtnGR8aRjQ5TMbtHy8cFMXuRP9Tjf9cCBzWRj9WI41rtsUVxw=s1600";
+        "media/heroes/ilia.png";
       desc.innerHTML =
         "Ilia, also known as The Huntress, is a well known hero in the Fusara Duelists universe. Her beauty can lead to some secrets that she can use to her advantage. With her ability to create almost anything, she perform abilities similar to other heroes.";
       break;
     case 1:
       doc.innerHTML = "Obsetileo";
       image.src =
-        "https://lh3.googleusercontent.com/drive-viewer/AK7aPaB2ywOhTe2LuZ0KNPcCob-qKLAcm6WRO8mud_Mb-6_UXlior2SKk82Omfrl1UapJOOrZ3xCsBHBQ12Nvfa6CWPejmXKTg=s2560";
+        "media/heroes/obsetileo.png";
       desc.innerHTML =
         "Obsetileo is warrior with blazing strategy. He focuses on his fireballs and fire novas for damage, but he is quite slow for attacks. His armor-related cards will allow you to survive attacks, so that you can find an opening and get the killing blow.";
       break;
     case 2:
       doc.innerHTML = "Separona";
       image.src =
-        "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCdutFcAJ9vcATvjpQ7K4lsEDFbLLSOl0pgh8K3UtpJaZeq4mB97mNQVmwTl8uvo8rFiqZgQQVX0aaU5PNj5iFQKwBGxg=s2560";
+        "media/heroes/separona.png";
       desc.innerHTML =
         "Separona is a cunning fighter. She is known for her quick movements, dealing as much damage as possible. She can even stun her foes with electricity manipulation, leaving them paralized. However, her powers can be costly, and this can lead her darker-side to appear and take over.";
       break;
     case 3:
       doc.innerHTML = "Chronos";
       image.src =
-        "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDuOhljwslshflN7TSRTXeAi60GjS5v6nYt3Z766tGZKqbgWIB41COaZHzstwNXKYI_Vv1THn-lf-iO-Q_7IKyz-8KK=s2560";
+        "media/heroes/chronos.png";
       desc.innerHTML =
         "Chronos is a knight of time. He has the ability to rewind his steps to to attack again and again. But his time manipulation can cause great disturbances to space-time, leaving Ripples in Time that can hinder Chronos. However, Chronos has the right tools to combat through.";
       break;
@@ -312,23 +312,7 @@ function flipCard(evt) {
   }
 }
 
-const observer = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		console.log(entry)
-		if(entry.isIntersecting) {
-			entry.target.classList.add('show');
-		} else {
-			entry.target.classList.remove('show');
-		}
-	});
-});
-
-document.querySelector(".home-logo").addEventListener("click", () => {
-  window.location.href = 'index.html';
-});
-
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
+setHero(heroIndex);
 
 const left = document.querySelector("#left_arrow");
 left.addEventListener("click", preivousHero);

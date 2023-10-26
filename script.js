@@ -55,19 +55,6 @@ function resetFade(){
 	desc.classList.remove('hidden');
 }
 
-const observer = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		console.log(entry)
-		if(entry.isIntersecting) {
-			entry.target.classList.add('show');
-		} else {
-			entry.target.classList.remove('show');
-		}
-	});
-});
-
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
 
 setGame(gameIndex);
 const left = document.querySelector("#left_arrow");
@@ -77,9 +64,9 @@ right.addEventListener("click", nextHero);
 document.querySelector(".to-top").addEventListener("click", () => {
   isScrolling = true;
 });
-document.querySelector(".to-top-home").addEventListener("click", () => {
+/*document.querySelector(".to-top-home").addEventListener("click", () => {
   isScrolling = true;
-});
+});*/
 
 setInterval(update, 1);
 
