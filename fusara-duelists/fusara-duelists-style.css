@@ -16,16 +16,16 @@
 }
 
 #peek {
-  background: url(https://img.itch.zone/aW1nLzUyNDk1NTUucG5n/original/6Xiz6E.png);
-  background-repeat: repeat;
-  background-size: auto;
   background-attachment: fixed;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
 #keywords {
-  background-color: #112;
+   background: url(https://img.itch.zone/aW1nLzUyNDk1NTUucG5n/original/6Xiz6E.png);
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: fixed;
   padding-top: 50px;
   padding-bottom: 50px;
 }
