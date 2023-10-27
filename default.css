@@ -120,6 +120,16 @@ iframe {
   color: black;
 }
 
+#left_arrow,
+#right_arrow {
+  cursor: pointer;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 .link {
 	text-decoration: none;

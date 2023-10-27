@@ -30,27 +30,27 @@ var peek3InAnimation = false;
 var peek3Flipped = false;
 
 var oCards = [
-  "media/heroes/obsetileo.png",
-  "media/heroes/obsetileo.png",
-  "media/heroes/obsetileo.png"
+  "media/heroes/Obsetileo.png",
+  "media/heroes/Obsetileo.png",
+  "media/heroes/Obsetileo.png"
   ];
 
 var sCards = [
-  "media/heroes/separona.png",
-  "media/heroes/separona.png",
-  "media/heroes/separona.png"
+  "media/heroes/Separona.png",
+  "media/heroes/Separona.png",
+  "media/heroes/Separona.png"
   ];
 
 var cCards = [
-  "media/heroes/chronos.png",
-  "media/heroes/chronos.png",
-  "media/heroes/chronos.png"
+  "media/heroes/Chronos.png",
+  "media/heroes/Chronos.png",
+  "media/heroes/Chronos.png"
   ];
 
 var iCards = [
-"media/heroes/ilia.png",
-"media/heroes/ilia.png",
-"media/heroes/ilia.png"
+"media/heroes/Ilia.png",
+"media/heroes/Ilia.png",
+"media/heroes/Ilia.png"
   ];
 
 function preivousHero() {
@@ -120,28 +120,28 @@ function setHero(index) {
     case 4:
       doc.innerHTML = "Ilia";
       image.src =
-        "media/heroes/ilia.png";
+        "media/heroes/Ilia.png";
       desc.innerHTML =
         "Ilia, also known as The Huntress, is a well known hero in the Fusara Duelists universe. Her beauty can lead to some secrets that she can use to her advantage. With her ability to create almost anything, she perform abilities similar to other heroes.";
       break;
     case 1:
       doc.innerHTML = "Obsetileo";
       image.src =
-        "media/heroes/obsetileo.png";
+        "media/heroes/Obsetileo.png";
       desc.innerHTML =
         "Obsetileo is warrior with blazing strategy. He focuses on his fireballs and fire novas for damage, but he is quite slow for attacks. His armor-related cards will allow you to survive attacks, so that you can find an opening and get the killing blow.";
       break;
     case 2:
       doc.innerHTML = "Separona";
       image.src =
-        "media/heroes/separona.png";
+        "media/heroes/Separona.png";
       desc.innerHTML =
         "Separona is a cunning fighter. She is known for her quick movements, dealing as much damage as possible. She can even stun her foes with electricity manipulation, leaving them paralized. However, her powers can be costly, and this can lead her darker-side to appear and take over.";
       break;
     case 3:
       doc.innerHTML = "Chronos";
       image.src =
-        "media/heroes/chronos.png";
+        "media/heroes/Chronos.png";
       desc.innerHTML =
         "Chronos is a knight of time. He has the ability to rewind his steps to to attack again and again. But his time manipulation can cause great disturbances to space-time, leaving Ripples in Time that can hinder Chronos. However, Chronos has the right tools to combat through.";
       break;

@@ -52,11 +52,21 @@
       </div>
     </div>
   </div>
+  
+  <div class="section">
+    <div class="container hidden">
+      <div class="main">
+		<div>
+			<h2>Meet the Heroes</h2>
+		</div>
+	  </div>
+	</div>
+	</div>
+  
   <div id="info">
     <div class="container hidden">
       <div class="main">
         <div class="heroes">
-          <h2>Meet the Heroes</h2>
           <p>You must select a hero that you will play as before you enter the dungeons. You can choose any of the heroes below:</p>
           <div class="row">
             <div class="imgColumn">
@@ -123,10 +133,10 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/project-fpf.data.unityweb",
-        frameworkUrl: "Build/project-fpf.framework.js.unityweb",
-        codeUrl: "Build/project-fpf.wasm.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
+        dataUrl: "project-fpf/Build/project-fpf.data.unityweb",
+        frameworkUrl: "project-fpf/Build/project-fpf.framework.js.unityweb",
+        codeUrl: "project-fpf/Build/project-fpf.wasm.unityweb",
+        streamingAssetsUrl: "project-fpf/StreamingAssets",
         companyName: "MacJCoding",
         productName: "Project FPF",
         productVersion: "0.3.3",
