@@ -64,6 +64,9 @@ right.addEventListener("click", nextHero);
 document.querySelector(".to-top").addEventListener("click", () => {
   isScrolling = true;
 });
+document.querySelector(".to-top-home").addEventListener("click", () => {
+  isScrolling = true;
+});
 
 setInterval(update, 1);
 

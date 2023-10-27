@@ -318,7 +318,10 @@ const left = document.querySelector("#left_arrow");
 left.addEventListener("click", preivousHero);
 const right = document.querySelector("#right_arrow");
 right.addEventListener("click", nextHero);
-document.querySelector(".floating-btn").addEventListener("click", () => {
+document.querySelector(".to-top").addEventListener("click", () => {
+  isScrolling = true;
+});
+document.querySelector(".to-top-home").addEventListener("click", () => {
   isScrolling = true;
 });
 
