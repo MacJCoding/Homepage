@@ -52,6 +52,13 @@ var iCards = [
 "media/heroes/Ilia.png",
 "media/heroes/Ilia.png"
   ];
+  
+var keywords = {
+	"foresee": "Choose from 3 cards to add to your hand, unless specified",
+	"burn": "The inflicted character takes 1 damage at the end of their turn",
+	"paralyze": "The inflicted character has a 50% chance not to attack at the end of their turn.",
+	"secret": "Stays on the field when played and triggers when the conditions are met"
+}
 
 function preivousHero() {
   if (!inAnimation) {
@@ -312,6 +319,24 @@ function flipCard(evt) {
   }
 }
 
+const keywordDesc = document.querySelector(".keywordDesc");
+var keyList = Object.keys(keywords);
+keyList.forEach((word) => {
+	var key = document.querySelector("."+word);
+	key.addEventListener("click", () => {
+		keywordDesc.innerHTML = keywords[word];
+		keywordDesc.classList.remove('show');
+		keywordDesc.classList.add('hidden');
+		setTimeout(resetWordFade, 1);
+	});
+});
+
+function resetWordFade(){
+	keywordDesc.classList.add('show');
+	keywordDesc.classList.remove('hidden');
+}
+
+
 setHero(heroIndex);
 
 const left = document.querySelector("#left_arrow");
@@ -324,6 +349,9 @@ document.querySelector(".to-top").addEventListener("click", () => {
 document.querySelector(".to-top-home").addEventListener("click", () => {
   isScrolling = true;
 });
+/*document.querySelector(".play").addEventListener("click", () => {
+  document.querySelector("#unity-container").scrollIntoView(false);
+});*/
 
 const peek1 = document.querySelector("#peek1");
 peek1.index = 1;
@@ -393,3 +421,4 @@ function updateHeroImage() {
     descalePhoto();
   }
 }
+

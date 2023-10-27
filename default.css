@@ -185,7 +185,7 @@ iframe {
 
 .fpf-video {
   width: 100vw;
-  height: 140vh;
+  height: 120vh;
   object-fit: cover;
   position: fixed;
   z-index: -100;

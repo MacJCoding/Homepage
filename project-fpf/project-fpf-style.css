@@ -2,8 +2,17 @@
   justify-content: space-between;
   color: white;
   padding-bottom: 50px;
-  padding-top: 150px;
+  padding-top: 50px;
   position: relative;
+}
+
+.play{
+	background-color: #111;
+	margin: auto;
+	text-align:center;
+	cursor: pointer;
+	width: 40%;
+	border: 10px solid rgba(100, 100, 255, 0.4);
 }
 
 #info {
@@ -28,7 +37,7 @@
   background-attachment: fixed;
   padding-top: 50px;
   padding-bottom: 50px;
-  text-align: center;
+  text-align:center;
 }
 
 .keyword {

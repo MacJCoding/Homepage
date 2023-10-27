@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>MacJCoding | Fusara Duelists</title>
+  <link rel="stylesheet" href="./default.css">
+  <link rel="stylesheet" href="./project-fpf/project-fpf-style.css">
+  <link rel="stylesheet" href="./project-fpf/TemplateData/style.css">
+
+</head>
+<body>
+<video autoplay loop class="back-video fpf-video" muted plays-inline>
+		<source src = "media/fpf-gameplay.mp4" type="video/mp4"/>
+</video>
+<!-- partial:index.partial.html -->
+<body>
+  <div class="nav"></div>
+  <div id="welcome">
+	<div class="welcome-container hidden" style="background: rgba(0, 0, 0, 0.75)">
+      <div class="main">
+        <div>
+			<h2>Welcome to the</h2>
+			<h1>Project FPF</h1>
+			<h2>Webpage!</h2>
+			<h3 class="play"><strong>Play Demo Now!</strong></h3>
+		</div>
+	</div>
+	</div>
+	</div>
+  <div id="summary">
+
+    <div class="container hidden">
+      <div class="main">
+        <div>
+          <h1>What is Project FPF?</h1>
+          <p>Project FPF is a stategic deck-building card game in the making. Play against other players to claim the most points by the end of the game. Use the abilities of many characters and your elites, to turn the game in your favor.
+            </br>
+            </br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <div class="container hidden">
+      <div class="main">
+		<div>
+			<h2>Meet the Elites</h2>
+			<p>Each deck must start with one Elite, and each Elite mostly determines your deck strategy</p>
+		</div>
+	  </div>
+	</div>
+	</div>
+  
+  <div id="info">
+    <div class="container hidden">
+      <div class="main">
+        <div class="heroes">
+          <p>There are many Elites in each class. Here are the main Elites for each one:</p>
+          <div class="row">
+            <div class="imgColumn">
+              <img src="https://th.bing.com/th/id/R.757dcae10509bdbcbbbe7231f9cec8ab?rik=7RO2A7Du7jYBww&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fleft-arrow-png-left-icon-1600.png&ehk=nQr%2fWbRJHtKEaV53ijq71OpNptgpG4FZxnChrIO0fBI%3d&risl=&pid=ImgRaw&r=0" style="width:100%" id="left_arrow">
+            </div>
+            <div class="imgColumn">
+              <img src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaB2ywOhTe2LuZ0KNPcCob-qKLAcm6WRO8mud_Mb-6_UXlior2SKk82Omfrl1UapJOOrZ3xCsBHBQ12Nvfa6CWPejmXKTg=s2560" class="heroImg" style="width:100%">
+            </div>
+            <div class="imgColumn">
+              <img src="https://icons-for-free.com/iconfiles/png/512/arrow-131964784973444275.png" style="width:100%" id="right_arrow">
+            </div>
+          </div>
+          <h3 id="className">Obsetileo</h3>
+          <p id="classDesc">
+            Obsetileo is warrior with blazing strategy. He focuses on his fireballs and fire novas for damage, but he is quite slow for attacks. His armor-related cards will allow you to survive attacks, so that you can find an opening and get the killing blow.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container hidden">
+      <div class="main">
+		<div>
+			<h2>Keywords</h2>
+          <p>In most card games, there are such things called keywords, which shortens the amount of text on a card to make the card more appealling.</p>
+		</div>
+	  </div>
+	</div>
+	</div>
+  
+  <div id="keywords">
+    <div class="container hidden">
+      <div class="main">
+        <div id="keywordsDesc">
+          <p>Select a keyword to reveal what they mean and what they do.</p>
+		  <h2>
+		  <span class="keyword on-summon">On-Summon</span>
+		  <span class="keyword burst">Burst</span>
+		  <span class="keyword ko">KO</span>
+		  <span class="keyword aura">Aura</span>
+		  <span class="keyword pre-phase">Pre-Phase</span>
+		  <span class="keyword post-phase">Post-Phase</span>
+		  <span class="keyword delay">Delay: (x)</span>
+		  </h2>
+		  <p class="keywordDesc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="game">
+    <div class="container hidden" style="height: 700px">
+      <div class="main">
+  <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=1280 height=720></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <!--<div id="unity-webgl-logo"></div>-->
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">Project FPF</div>
+      </div>
+    </div>
+	</div>
+    </div>
+  </div>
+    <script>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var warningBanner = document.querySelector("#unity-warning");
+
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+      var buildUrl = "project-fpf/Build";
+      var loaderUrl = buildUrl + "/Project PFP PTS.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/Project PFP PTS.data.unityweb",
+        frameworkUrl: buildUrl + "/Project PFP PTS.framework.js.unityweb",
+        codeUrl: buildUrl + "/Project PFP PTS.wasm.unityweb",
+        streamingAssetsUrl: "project-fpf/StreamingAssets",
+        companyName: "MacJCoding",
+        productName: "Project FPF",
+        productVersion: "0.3.3",
+        showBanner: unityShowBanner,
+      };
+
+      // By default Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
+
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+
+        unityShowBanner('WebGL builds are not supported on mobile devices.');
+      } else {
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+
+        canvas.style.width = "854px";
+        canvas.style.height = "480px";
+      }
+
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+</body>
+<button class="to-top">To Top</button>
+<!-- partial -->
+<script  src="./default.js"></script>
+  <script  src="./project-fpf/project-fpf-script.js"></script>
+	
+</body>
+</html>
