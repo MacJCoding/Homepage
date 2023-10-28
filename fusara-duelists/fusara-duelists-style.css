@@ -67,3 +67,11 @@ body {
   width: 33.33%;
   padding: 5px;
 }
+
+/*mobile landscape*/
+@media (max-height: 500px) {
+	#summary{
+		padding-top: 100px;
+	}
+	
+}

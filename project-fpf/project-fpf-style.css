@@ -1,3 +1,13 @@
+#welcome-fpf{
+	justify-content: space-between;
+  padding-bottom: 50px;
+  padding-top: 120px;
+  position: relative;
+  text-align: center;
+  font-size: 36px;
+  color:white;
+}
+
 #summary {
   justify-content: space-between;
   color: white;
@@ -41,12 +51,12 @@
 }
 
 .keyword {
+	background-color: #DDD;
 	cursor: pointer;
 	padding: 10px;
 }
 
 #game {
-	background-color: #112;
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
@@ -75,4 +85,14 @@ body {
   float: left;
   width: 33.33%;
   padding: 5px;
+}
+
+@media (max-height: 500px) {
+	.play{ font-size: 36px; }
+	#game {zoom: 0.7;}
+}
+
+@media (orientation: portrait) {
+	.play{ display:none }
+	#unity-container { display:none; }
 }

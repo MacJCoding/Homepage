@@ -72,28 +72,28 @@ function setHero(index) {
       image.src =
         "media/heroes/Ilia.png";
       desc.innerHTML =
-        "Ilia, also known as The Huntress, is a well known hero in the Fusara Duelists universe. Her beauty can lead to some secrets that she can use to her advantage. With her ability to create almost anything, she perform abilities similar to other heroes.";
+        "Ilia, also known as The Huntress, is well known in the Fusara universe. Her class surrounds around her known popularity of a hero. She destroys her enemies with her abilities. She becomes more power the more summons she has by her side.";
       break;
     case 1:
       doc.innerHTML = "Obsetileo";
       image.src =
         "media/heroes/Obsetileo.png";
       desc.innerHTML =
-        "Obsetileo is warrior with blazing strategy. He focuses on his fireballs and fire novas for damage, but he is quite slow for attacks. His armor-related cards will allow you to survive attacks, so that you can find an opening and get the killing blow.";
+        "Obsetileo is warrior with blazing strategy. His class is known to disrupt his enemies as his own abilities would negate any magical properties that would affect him or his allies. He and his allies rely on themselves to win fights rather from outside help.";
       break;
     case 2:
       doc.innerHTML = "Separona";
       image.src =
         "media/heroes/Separona.png";
       desc.innerHTML =
-        "Separona is a cunning fighter. She is known for her quick movements, dealing as much damage as possible. She can even stun her foes with electricity manipulation, leaving them paralized. However, her powers can be costly, and this can lead her darker-side to appear and take over.";
+        "Separona is a cunning fighter. She has shown to best herself, becoming stronger everyday. This eventually lead to her professionalism in using her hammer, The Blessed Jet, which can destroy anyone that gets in its way. Separona's class focus on this power, destroying enemy summons";
       break;
     case 3:
       doc.innerHTML = "Chronos";
       image.src =
         "media/heroes/Chronos.png";
       desc.innerHTML =
-        "Chronos is a knight of time. He has the ability to rewind his steps to to attack again and again. But his time manipulation can cause great disturbances to space-time, leaving Ripples in Time that can hinder Chronos. However, Chronos has the right tools to combat through.";
+        "Chronos is a knight of time. His class includes himself from other times, like Past and Future. He strengths as time goes on, and with his advantage with time he can reset the power of any enemies around him.";
       break;
   }
 }
@@ -104,6 +104,11 @@ var keyList = Object.keys(keywords);
 keyList.forEach((word) => {
 	var key = document.querySelector("."+word);
 	key.addEventListener("click", () => {
+		keyList.forEach((w) => {
+			var key = document.querySelector("."+w);
+			key.style.backgroundColor = "#DDD";
+		})
+		key.style.backgroundColor = "#999";
 		keywordDesc.innerHTML = keywords[word];
 		keywordDesc.classList.remove('show');
 		keywordDesc.classList.add('hidden');
@@ -124,9 +129,6 @@ left.addEventListener("click", preivousHero);
 const right = document.querySelector("#right_arrow");
 right.addEventListener("click", nextHero);
 document.querySelector(".to-top").addEventListener("click", () => {
-  isScrolling = true;
-});
-document.querySelector(".to-top-home").addEventListener("click", () => {
   isScrolling = true;
 });
 document.querySelector(".play").addEventListener("click", () => {

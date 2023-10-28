@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>MacJCoding | Fusara Duelists</title>
+  <meta name = "viewport" content = "width=device-width, initial-scale = 1">
   <link rel="stylesheet" href="./default.css">
   <link rel="stylesheet" href="./fusara-duelists/fusara-duelists-style.css">
   <link rel="stylesheet" href="./project-fpf/TemplateData/style.css">
@@ -10,14 +11,17 @@
 </head>
 <body>
 <video autoplay loop class="back-video" muted plays-inline>
-		<source src = "new-outro.mp4" type="video/mp4"/>
+		<source src = "media/fusara-duelists-gamplay3.mp4" type="video/mp4"/>
 </video>
 <!-- partial:index.partial.html -->
 <body>
-  <div class="nav"></div>
+<div class="nav"></div>
+<div id="mySidebar" class="sidebar"></div>
+
+<div id = "main">	
   <div id="welcome">
 	<div class="welcome-container hidden" style="background: rgba(0, 0, 0, 0.75)">
-      <div class="main">
+      <div class="box">
         <div>
 			<h2>Welcome to the</h2>
 			<h1>Fusara Duelists</h1>
@@ -29,7 +33,7 @@
   <div id="summary">
 
     <div class="container hidden">
-      <div class="main">
+      <div class="box">
         <div>
           <h1>What is Fusara Duelists?</h1>
           <p>Project Fusara Duelists is a rogue-like deckbuilding card game in the making. There are many creatures that lurk in the dungeons of Fusara Duelists. As your selected hero, you must traverse through the dungeons as far as possible. You must duel against these creatures with your special crafted deck that you can edit along your journey. Good luck, hero, and may the power of the Fusara be upon you.
@@ -55,7 +59,7 @@
   
   <div class="section">
     <div class="container hidden">
-      <div class="main">
+      <div class="box">
 		<div>
 			<h2>Meet the Heroes</h2>
 		</div>
@@ -65,7 +69,7 @@
   
   <div id="info">
     <div class="container hidden">
-      <div class="main">
+      <div class="box">
         <div class="heroes">
           <p>You must select a hero that you will play as before you enter the dungeons. You can choose any of the heroes below:</p>
           <div class="row">
@@ -90,7 +94,7 @@
   
    <div class="section">
     <div class="container hidden">
-      <div class="main">
+      <div class="box">
 		<div>
 			<h2>SNEAK PEEKS?</h2>
 		</div>
@@ -100,7 +104,7 @@
   
   <div id="peek">
     <div class="container hidden">
-      <div class="main">
+      <div class="box">
         <div id="sneak-peek">
           <div class="row">
             <div class="imgColumn">
@@ -120,7 +124,7 @@
   
   <div class="section">
     <div class="container hidden">
-      <div class="main">
+      <div class="box">
 		<div>
 			<h2>Keywords</h2>
           <p>In most card games, there are such things called keywords, which shortens the amount of text on a card to make the card more appealling.</p>
@@ -131,7 +135,7 @@
   
   <div id="keywords">
     <div class="container hidden">
-      <div class="main">
+      <div class="box">
         <div id="keywordsDesc">
           <p>Select a keyword to reveal what they mean and what they do.</p>
 		  <h2>
@@ -144,6 +148,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </body>
 <button class="to-top">To Top</button>

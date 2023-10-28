@@ -324,6 +324,11 @@ var keyList = Object.keys(keywords);
 keyList.forEach((word) => {
 	var key = document.querySelector("."+word);
 	key.addEventListener("click", () => {
+		keyList.forEach((w) => {
+			var key = document.querySelector("."+w);
+			key.style.backgroundColor = "#DDD";
+		})
+		key.style.backgroundColor = "#999";
 		keywordDesc.innerHTML = keywords[word];
 		keywordDesc.classList.remove('show');
 		keywordDesc.classList.add('hidden');
@@ -344,9 +349,6 @@ left.addEventListener("click", preivousHero);
 const right = document.querySelector("#right_arrow");
 right.addEventListener("click", nextHero);
 document.querySelector(".to-top").addEventListener("click", () => {
-  isScrolling = true;
-});
-document.querySelector(".to-top-home").addEventListener("click", () => {
   isScrolling = true;
 });
 /*document.querySelector(".play").addEventListener("click", () => {
