@@ -3,7 +3,6 @@ const doc = document.querySelector("#className");
 const desc = document.querySelector("#classDesc");
 const cardback =
   "https://youre.outof.games/media/uploads/6c/94/6c945403-1207-454b-a953-a1787ba9016f/cardback_0.png";
-var isScrolling = false;
 var gameIndex = 0;
 var gameNames = ["Lost in The Shadows",
 				"Colordle",
@@ -61,18 +60,3 @@ const left = document.querySelector("#left_arrow");
 left.addEventListener("click", preivousHero);
 const right = document.querySelector("#right_arrow");
 right.addEventListener("click", nextHero);
-document.querySelector(".to-top").addEventListener("click", () => {
-  isScrolling = true;
-});
-
-setInterval(update, 1);
-
-function update() {
-  if (isScrolling) {
-    if (window.scrollY > 0) {
-      window.scrollTo(0, window.scrollY - 10);
-    } else {
-      isScrolling = false;
-    }
-  }
-}

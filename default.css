@@ -144,11 +144,14 @@ a{
   display: flex;
   list-style: none;
   column-gap: 10px;
+  margin:0;
 }
 
-.tab {
+.tab, .dropbtn {
   margin: 10px;
   cursor: pointer;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .tab-icon{
@@ -176,7 +179,6 @@ a{
 
 #logo {
 	padding-left: 1%;
-	cursor:pointer;
 }
 
 .back-video {
@@ -210,6 +212,142 @@ a{
   right: 20px;
   z-index: 999;
 }
+
+#rotate-device {
+	display: none;
+}
+
+.open-tab{
+	display:none;
+}
+
+/*mobile*/
+@media (orientation: portrait) {
+	body{
+		zoom: 0.75;
+		background: url("https://img.itch.zone/aW1nLzUyNDk1NTUucG5n/original/6Xiz6E.png");
+		background-repeat: repeat;
+		background-size: auto;
+		background-attachment: fixed;
+	}
+	.back-video {
+		zoom: 1.5;
+	}
+	.container {
+		max-width: 90%;
+	}
+	.tabs {
+		display:none;
+	}
+	.welcome-container{
+		margin-top: 60px;
+		margin-bottom: 75px;
+	}
+	#rotate-device {
+		display: block;
+	}
+	#logo {
+		margin-left: 33%;
+		margin-right: 45%;
+		width:10%;
+	}
+	.open-tab{
+		display:block;
+		margin-left: 2%;
+		width: 10%;
+		cursor:pointer;
+	}
+	.back-video{
+		display: none;
+	}
+	.fpf-video{
+		display: none;
+	}
+}
+
+/*mobile landscape*/
+@media (max-height: 500px) {
+	body {
+		zoom: 0.75;
+		background: url("https://img.itch.zone/aW1nLzUyNDk1NTUucG5n/original/6Xiz6E.png");
+		background-repeat: repeat;
+		background-size: auto;
+		background-attachment: fixed;
+	}
+	.back-video {
+		zoom: 3;
+	}
+	.container {
+		max-width: 90%;
+	}
+	#welcome{
+		padding-top: 100px;
+	}
+	.welcome-container{
+		zoom: 0.5;
+		max-width: 90%;
+		
+	}
+	.back-video{
+		display: none;
+	}
+	.fpf-video{
+		display: none;
+	}
+	
+}
+
+/*destop*/
+@media (orientation: landscape) {
+	#rotate-device {
+		display: none;
+	}
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar li:hover, .dropdown:hover .dropbtn {
+  opacity: 0.5;
+}
+
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content div:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
 .sidebar {
   height: 100%;
   width: 0;
@@ -243,67 +381,7 @@ a{
   margin-left: 50px;
 }
 
-#rotate-device {
-	display: none;
-}
-
-@media (orientation: portrait) {
-	body{
-		zoom: 0.75;
-	}
-	.back-video {
-		zoom: 1.5;
-	}
-	.container {
-		max-width: 90%;
-	}
-	.tabs {
-		display:none;
-	}
-	.welcome-container{
-		margin-top: 60px;
-		margin-bottom: 75px;
-	}
-	#rotate-device {
-		display: block;
-	}
-}
-
-/*mobile landscape*/
-@media (max-height: 500px) {
-	body {
-		zoom: 0.75;
-	}
-	.back-video {
-		zoom: 3;
-	}
-	.container {
-		max-width: 90%;
-	}
-	#welcome{
-		padding-top: 100px;
-	}
-	.welcome-container{
-		zoom: 0.5;
-		max-width: 90%;
-		
-	}
-	
-}
-
-@media (orientation: landscape) {
-	#rotate-device {
-		display: none;
-	}
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
-
-.sidebar .dropdown-btn {
+.sidebar .sidebar-dropdown-btn {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -313,7 +391,7 @@ a{
   cursor: pointer;
 }
 
-.dropdown-container {
+.sidebar-dropdown-container {
   display: none;
   background-color: #262626;
   padding-left: 8px;

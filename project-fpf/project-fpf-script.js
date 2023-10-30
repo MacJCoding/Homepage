@@ -3,7 +3,6 @@ const doc = document.querySelector("#className");
 const desc = document.querySelector("#classDesc");
 const cardback =
   "https://youre.outof.games/media/uploads/6c/94/6c945403-1207-454b-a953-a1787ba9016f/cardback_0.png";
-var isScrolling = false;
 var heroIndex = 1;
 
 var heroImageHeight = document.querySelector(".heroImg").height;
@@ -22,6 +21,11 @@ var keywords = {
 }
 
 function preivousHero() {
+	if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ){ 
+	heroIndex--;
+    if (heroIndex < 1) heroIndex = 4;
+    setHero(heroIndex);
+	}else {
   if (!inAnimation) {
     heroImageHeight = document.querySelector(".heroImg").height;
     grow = false;
@@ -29,9 +33,15 @@ function preivousHero() {
     heroIndex--;
     if (heroIndex < 1) heroIndex = 4;
   }
+	}
 }
 
 function nextHero() {
+	if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ){ 
+	heroIndex++;
+    if (heroIndex > 4) heroIndex = 1;
+    setHero(heroIndex);
+	}else {
   if (!inAnimation) {
     heroImageHeight = document.querySelector(".heroImg").height;
     grow = false;
@@ -39,6 +49,7 @@ function nextHero() {
     heroIndex++;
     if (heroIndex > 4) heroIndex = 1;
   }
+	}
 }
 
 function descalePhoto() {
@@ -96,6 +107,25 @@ function setHero(index) {
         "Chronos is a knight of time. His class includes himself from other times, like Past and Future. He strengths as time goes on, and with his advantage with time he can reset the power of any enemies around him.";
       break;
   }
+  if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ){ 
+	doc.classList.remove('show');
+	doc.classList.add('hidden');
+	image.classList.remove('show');
+	image.classList.add('hidden');
+	desc.classList.remove('show');
+	desc.classList.add('hidden');
+	setTimeout(resetFade, 1);
+  }
+}
+
+
+function resetFade(){
+	doc.classList.add('show');
+	doc.classList.remove('hidden');
+	image.classList.add('show');
+	image.classList.remove('hidden');
+	desc.classList.add('show');
+	desc.classList.remove('hidden');
 }
 
 const keywordDesc = document.querySelector(".keywordDesc");
@@ -128,9 +158,6 @@ const left = document.querySelector("#left_arrow");
 left.addEventListener("click", preivousHero);
 const right = document.querySelector("#right_arrow");
 right.addEventListener("click", nextHero);
-document.querySelector(".to-top").addEventListener("click", () => {
-  isScrolling = true;
-});
 document.querySelector(".play").addEventListener("click", () => {
   document.querySelector("#unity-container").scrollIntoView(false);
 });
@@ -139,13 +166,6 @@ setInterval(update, 1);
 
 function update() {
   updateHeroImage();
-  if (isScrolling) {
-    if (window.scrollY > 0) {
-      window.scrollTo(0, window.scrollY - 10);
-    } else {
-      isScrolling = false;
-    }
-  }
 }
 function updateHeroImage() {
   if (grow) {

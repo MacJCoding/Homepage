@@ -3,7 +3,6 @@ const doc = document.querySelector("#className");
 const desc = document.querySelector("#classDesc");
 const cardback =
   "https://youre.outof.games/media/uploads/6c/94/6c945403-1207-454b-a953-a1787ba9016f/cardback_0.png";
-var isScrolling = false;
 var heroIndex = 1;
 
 var heroImageHeight = document.querySelector(".heroImg").height;
@@ -61,13 +60,33 @@ var keywords = {
 }
 
 function preivousHero() {
+  if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ){ 
+	heroIndex--;
+    if (heroIndex < 1) heroIndex = 4;
+    setHero(heroIndex);
+	peek1Flipped = false;
+    peek2Flipped = false;
+    peek3Flipped = false;
+	peek1.src = cardback;
+	peek2.src = cardback;
+	peek3.src = cardback;
+	peek1.classList.remove('show');
+	peek1.classList.add('hidden');
+	setTimeout(resetFade1, 1);
+	peek2.classList.remove('show');
+	peek2.classList.add('hidden');
+	setTimeout(resetFade2, 1);
+	peek3.classList.remove('show');
+	peek3.classList.add('hidden');
+	setTimeout(resetFade3, 1);
+	}else {
   if (!inAnimation) {
     heroImageHeight = document.querySelector(".heroImg").height;
     grow = false;
     inAnimation = true;
     heroIndex--;
     if (heroIndex < 1) heroIndex = 4;
-    peek1Flipped = false;
+	peek1Flipped = false;
     growPeek1 = false;
     peek1Height = peek1.height;
     peek2Flipped = false;
@@ -77,16 +96,37 @@ function preivousHero() {
     growPeek3 = false;
     peek3Height = peek3.height;
   }
+	}
 }
 
 function nextHero() {
+  if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ){ 
+	heroIndex++;
+    if (heroIndex > 4) heroIndex = 1;
+    setHero(heroIndex);
+	peek1Flipped = false;
+    peek2Flipped = false;
+    peek3Flipped = false;
+	peek1.src = cardback;
+	peek2.src = cardback;
+	peek3.src = cardback;
+	peek1.classList.remove('show');
+	peek1.classList.add('hidden');
+	setTimeout(resetFade1, 1);
+	peek2.classList.remove('show');
+	peek2.classList.add('hidden');
+	setTimeout(resetFade2, 1);
+	peek3.classList.remove('show');
+	peek3.classList.add('hidden');
+	setTimeout(resetFade3, 1);
+	}else {
   if (!inAnimation) {
     heroImageHeight = document.querySelector(".heroImg").height;
     grow = false;
     inAnimation = true;
     heroIndex++;
     if (heroIndex > 4) heroIndex = 1;
-    peek1Flipped = false;
+	peek1Flipped = false;
     growPeek1 = false;
     peek1Height = peek1.height;
     peek2Flipped = false;
@@ -96,6 +136,7 @@ function nextHero() {
     growPeek3 = false;
     peek3Height = peek3.height;
   }
+	}
 }
 
 function descalePhoto() {
@@ -153,6 +194,24 @@ function setHero(index) {
         "Chronos is a knight of time. He has the ability to rewind his steps to to attack again and again. But his time manipulation can cause great disturbances to space-time, leaving Ripples in Time that can hinder Chronos. However, Chronos has the right tools to combat through.";
       break;
   }
+  if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ){ 
+	doc.classList.remove('show');
+	doc.classList.add('hidden');
+	image.classList.remove('show');
+	image.classList.add('hidden');
+	desc.classList.remove('show');
+	desc.classList.add('hidden');
+	setTimeout(resetFade, 1);
+  }
+}
+  
+function resetFade(){
+	doc.classList.add('show');
+	doc.classList.remove('hidden');
+	image.classList.add('show');
+	image.classList.remove('hidden');
+	desc.classList.add('show');
+	desc.classList.remove('hidden');
 }
 
 function revealCard(index) {
@@ -292,6 +351,7 @@ function scaleCard(index) {
 
 function flipCard(evt) {
   card = evt.currentTarget;
+  if (!/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ){
   switch (evt.currentTarget.index) {
     case 1:
       if (!peek1Flipped) {
@@ -303,7 +363,6 @@ function flipCard(evt) {
     case 2:
       if (!peek2Flipped) {
         peek2Flipped = true;
-        console.log("2");
         growPeek2 = false;
         peek2Height = peek2.height;
       }
@@ -311,12 +370,40 @@ function flipCard(evt) {
     case 3:
       if (!peek3Flipped) {
         peek3Flipped = true;
-        console.log("3");
         growPeek3 = false;
         peek3Height = peek3.height;
       }
       break;
-  }
+  } }else {
+	 switch (evt.currentTarget.index) {
+    case 1:
+      if (!peek1Flipped) {
+        peek1Flipped = true;
+        revealCard(1);
+		evt.currentTarget.classList.remove('show');
+		evt.currentTarget.classList.add('hidden');
+		setTimeout(resetFade1, 1);
+      }
+      break;
+    case 2:
+      if (!peek2Flipped) {
+        peek2Flipped = true;
+         revealCard(2);
+        evt.currentTarget.classList.remove('show');
+		evt.currentTarget.classList.add('hidden');
+		setTimeout(resetFade2, 1);
+      }
+      break;
+    case 3:
+      if (!peek3Flipped) {
+        peek3Flipped = true;
+         revealCard(3);
+        evt.currentTarget.classList.remove('show');
+		evt.currentTarget.classList.add('hidden');
+		setTimeout(resetFade3, 1);
+      }
+      break;
+  }}
 }
 
 const keywordDesc = document.querySelector(".keywordDesc");
@@ -348,9 +435,6 @@ const left = document.querySelector("#left_arrow");
 left.addEventListener("click", preivousHero);
 const right = document.querySelector("#right_arrow");
 right.addEventListener("click", nextHero);
-document.querySelector(".to-top").addEventListener("click", () => {
-  isScrolling = true;
-});
 /*document.querySelector(".play").addEventListener("click", () => {
   document.querySelector("#unity-container").scrollIntoView(false);
 });*/
@@ -367,18 +451,26 @@ peek3.addEventListener("click", flipCard);
 
 setInterval(update, 1);
 
+function resetFade1(){
+	peek1.classList.add('show');
+	peek1.classList.remove('hidden');
+}
+
+function resetFade2(){
+	peek2.classList.add('show');
+	peek2.classList.remove('hidden');
+}
+
+function resetFade3(){
+	peek3.classList.add('show');
+	peek3.classList.remove('hidden');
+}
+
 function update() {
   updateSneakPeek(1);
   updateSneakPeek(2);
   updateSneakPeek(3);
   updateHeroImage();
-  if (isScrolling) {
-    if (window.scrollY > 0) {
-      window.scrollTo(0, window.scrollY - 10);
-    } else {
-      isScrolling = false;
-    }
-  }
 }
 
 function updateSneakPeek(index) {
