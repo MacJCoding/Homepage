@@ -87,6 +87,10 @@ a{
 	text-decoration:none;
 }
 
+a:hover {
+	opacity: 0.5;
+}
+
 .fade-in {
 	animation: fadeIn, 2s;
 }
@@ -125,8 +129,13 @@ a{
 }
 
 #left_arrow,
-#right_arrow {
+#right_arrow,
+#randomButton {
   cursor: pointer;
+}
+
+#randomButton {
+	background-color: #888;
 }
 
 .row::after {
@@ -160,7 +169,7 @@ a{
 	cursor: pointer;
 }
 
-.nav {
+.nav, .navDevlog {
 	font-size: 20px;
   position: fixed;
   display: flex;
@@ -348,7 +357,7 @@ a{
   .sidebar a {font-size: 18px;}
 }
 
-.sidebar {
+.sidebar, .sidebarDevlog {
   height: 100%;
   width: 0;
   position: fixed;
@@ -360,7 +369,7 @@ a{
   transition: 0.5s;
 }
 
-.sidebar .sidebox{
+.sidebar .sidebox, .sidebarDevlog .sidebox{
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -370,18 +379,18 @@ a{
   cursor: pointer;
 }
 
-.sidebar a:hover {
+.sidebar a:hover, .sidebarDevlog a:hover {
   color: #f1f1f1;
 }
 
-.sidebar .closebtn {
+.sidebar .closebtn, .sidebarDevlog .closebtn {
   top: 0;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
 }
 
-.sidebar .sidebar-dropdown-btn {
+.sidebar .sidebar-dropdown-btn, .sidebarDevlog .sidebar-dropdown-btn {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;

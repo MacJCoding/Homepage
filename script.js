@@ -60,3 +60,28 @@ const left = document.querySelector("#left_arrow");
 left.addEventListener("click", preivousHero);
 const right = document.querySelector("#right_arrow");
 right.addEventListener("click", nextHero);
+
+const randomVidContainer = document.querySelector('.random-video');
+let req = new XMLHttpRequest();
+var videoList;
+
+req.onreadystatechange = () => {
+  if (req.readyState == XMLHttpRequest.DONE) {
+	videoList = JSON.parse(req.responseText)['record']['videos'];
+	newVideo();
+  }
+};
+
+const randomButton = document.querySelector("#randomButton");
+randomButton.addEventListener("click", newVideo);
+
+function newVideo(){
+	var a = Math.floor(Math.random() * videoList.length);
+	randomVidContainer.innerHTML = "<h3>"+videoList[a]['name']+"</h3>"+//<a style='text-decoration: none; color:black' href='https://youtu.be/"+videoList[a]['link']+"'>Watch Here</a></br>"+
+	'<iframe width="560" height="560" src="https://www.youtube.com/embed/'+videoList[a]['link']+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+}
+
+req.open("GET", "https://api.jsonbin.io/v3/b/654a7abb12a5d376599630e6/latest", true);
+req.setRequestHeader("X-Access-Key", "$2a$10$7V8rdmDR5yINKSL07ixq/ORz2fYnIGHnv9C/dFK1/hJY/0eCvL/VW");
+req.send();
+
