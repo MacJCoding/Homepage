@@ -1,3 +1,6 @@
+import data from './videos.json';
+console.log(data);
+
 const image = document.querySelector(".gameImg");
 const doc = document.querySelector("#className");
 const desc = document.querySelector("#classDesc");

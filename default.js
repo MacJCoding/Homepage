@@ -58,7 +58,7 @@ document.querySelector(".sidebar").innerHTML =
 "<a class = \"sidebox\" class=\"link\" href=\"index.html\">Home</a>"+
 "<div class=\"sidebar-dropdown-btn\">Fusara&nbsp;Duelists</div><div class=\"sidebar-dropdown-container\">"+
 	"<a class = \"sidebox\" class=\"link\" href=\"fusara-duelists.html\">What&nbsp;is&nbsp;Fusara&nbsp;Duelists?</a>"+
-	"<a class = \"sidebox\" class=\"link\" href=\"\">Devlogs</a>"+
+	"<a class = \"sidebox\" class=\"link\" href=\"fusara-duelists-devlogs.html\">Devlogs</a>"+
 "</div>"+
 "<div class=\"sidebar-dropdown-btn\">Project&nbsp;FPF</div><div class=\"sidebar-dropdown-container\">"+
 	"<a class = \"sidebox\" class=\"link\" href=\"project-fpf.html\">What&nbsp;is&nbsp;Project&nbsp;FPF?</a>"+
