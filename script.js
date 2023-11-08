@@ -1,4 +1,4 @@
-import data from './media/videos.json' assert { type: 'json' };
+import data from './media/videos.json';
 console.log(data);
 
 const image = document.querySelector(".gameImg");
