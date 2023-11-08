@@ -129,8 +129,7 @@ a:hover {
 }
 
 #left_arrow,
-#right_arrow,
-#randomButton {
+#right_arrow {
   cursor: pointer;
 }
 
