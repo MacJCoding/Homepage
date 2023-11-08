@@ -1,4 +1,4 @@
-import data from './media/videos.json';
+import data from './media/videos.json' assert { type: 'json' };
 console.log(data);
 
 const image = document.querySelector(".gameImg");
@@ -65,7 +65,7 @@ const right = document.querySelector("#right_arrow");
 right.addEventListener("click", nextHero);
 
 const randomVidContainer = document.querySelector('.random-video');
-var videoList = videos['videos'];
+var videoList = data['videos'];
 /*
 let req = new XMLHttpRequest();
 
