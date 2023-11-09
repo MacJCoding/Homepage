@@ -31,7 +31,7 @@ const observer = new IntersectionObserver((entries) => {
 if(document.querySelector(".nav")!=null)
 document.querySelector(".nav").innerHTML = 
 "<img class=\"open-tab\" onclick=\"openNav()\"src=\"media/menu-icon.png\"></img>"+
-"<img id=\"logo\" src=\"https://i.ytimg.com/an/zHPvj3O1IYbQdNSfePnWQg/featured_channel.jpg?v=5dc42372\" style=\"width:70px\"></img>"+
+"<img id=\"logo\" class='home-logo' src=\"https://i.ytimg.com/an/zHPvj3O1IYbQdNSfePnWQg/featured_channel.jpg?v=5dc42372\" style=\"width:70px\"></img>"+
 "<ul class=\"tabs\">"+
 "<li class=\"tab\"><a class=\"link\" href=\"index.html\">Home</a></li>"+
 "<li class=\"tab, dropdown\">"+
@@ -72,7 +72,7 @@ document.querySelector(".sidebar").innerHTML =
 if(document.querySelector(".navDevlog")!=null)
 document.querySelector(".navDevlog").innerHTML = 
 "<img class=\"open-tab\" onclick=\"openNav()\"src=\"../media/menu-icon.png\"></img>"+
-"<img id=\"logo\" src=\"https://i.ytimg.com/an/zHPvj3O1IYbQdNSfePnWQg/featured_channel.jpg?v=5dc42372\" style=\"width:70px\"></img>"+
+"<img id=\"logo\" class='home-logo-devlog' src=\"https://i.ytimg.com/an/zHPvj3O1IYbQdNSfePnWQg/featured_channel.jpg?v=5dc42372\" style=\"width:70px\"></img>"+
 "<ul class=\"tabs\">"+
 "<li class=\"tab\"><a class=\"link\" href=\"../index.html\">Home</a></li>"+
 "<li class=\"tab, dropdown\">"+
@@ -110,10 +110,15 @@ document.querySelector(".sidebarDevlog").innerHTML =
 	"<a class=\"sidebox\" class=\"link\" href=\"https://www.youtube.com/@macjcoding\">Youtube</a>"+
 	"<a class=\"sidebox\" class=\"link\" href=\"https://github.com/MacJCoding\">GitHub</div></a>"
 
-
-/*document.querySelector(".home-logo").addEventListener("click", () => {
+if(document.querySelector(".home-logo")!=null)
+document.querySelector(".home-logo").addEventListener("click", () => {
   window.location.href = 'index.html';
-});*/
+});
+
+if(document.querySelector(".home-logo-devlog")!=null)
+document.querySelector(".home-logo-devlog").addEventListener("click", () => {
+  window.location.href = '../index.html';
+});
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
