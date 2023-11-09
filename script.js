@@ -1,5 +1,5 @@
-import data from './media/videos.json' assert { type: 'json' };
-console.log(data);
+//import data from './media/videos.json' assert { type: 'json' };
+//console.log(data);
 
 const image = document.querySelector(".gameImg");
 const doc = document.querySelector("#className");
@@ -64,6 +64,111 @@ left.addEventListener("click", preivousHero);
 const right = document.querySelector("#right_arrow");
 right.addEventListener("click", nextHero);
 
+var data = {
+  "videos": [
+    {
+      "name": "Ying VS Volpina | Armored Arena",
+      "link": "66NZEe_HhjA"
+    },
+    {
+      "name": "Monika VS Steve | Armored Arena",
+      "link": "Tw-Rzg_RJqs"
+    },
+    {
+      "name": "Abigail VS Hella | Armored Arena",
+      "link": "_YLIRDtXzso"
+    },
+    {
+      "name": "Claire VS Null | Armored Arena",
+      "link": "vN1u62yVAYU"
+    },
+    {
+      "name": "Chronos VS Rain | Armored Arena",
+      "link": "qqIJxwrRJYM"
+    },
+    {
+      "name": "Alex VS Nina | Armored Arena",
+      "link": "aBNHMSey3-A"
+    },
+    {
+      "name": "Stella VS Teufel | Armored Arena",
+      "link": "of-u6TLfDx0"
+    },
+    {
+      "name": "Dark Control VS Chaos | Armored Arena",
+      "link": "bn2RPqiOc44"
+    },
+    {
+      "name": "League of Legends' Turret in Unity | MacJCoding",
+      "link": "L2mBBISO1bE"
+    },
+    {
+      "name": "Super Smash Bros' Home Run Contest in Unity | MacJCoding",
+      "link": "XYYS30MGjHw"
+    },
+    {
+      "name": "Recreating Pong & Intro to Unity/Game Development | MacJCoding",
+      "link": "1AA59NmCt5Q"
+    },
+    {
+      "name": "Deck Builder & Remote Configuration | Fusara Duelists Devlog #3 | MacJCoding",
+      "link": "tB5VThBeLjg"
+    },
+    {
+      "name": "All Planned Out | Fusara Duelists Devlog #2 | MacJCoding",
+      "link": "qK2nFk02Qys"
+    },
+    {
+      "name": "Ribben Rose Apartment | MacJCoding",
+      "link": "ttPrBrJ47xA"
+    },
+    {
+      "name": "Channel Update | MacJCoding",
+      "link": "X2QMoWaFPBs"
+    },
+    {
+      "name": "Intro to the Project | Project PFP Devlog #1 | MacJCoding",
+      "link": "iEBo-FovkIQ"
+    },
+    {
+      "name": "Gameplay & More Updates | Project PFP Devlog #2 | MacJCoding",
+      "link": "iQ56hyDxq-8"
+    },
+    {
+      "name": "Why Yogg?!?! - Hearthstone: Battlegrounds | Obsetileo",
+      "link": "NlERgpRJCjE"
+    },
+    {
+      "name": "Hearthstone Battlegrounds - A Perfect Pair Of Quests | No Commentary Gameplay | Obsetileo",
+      "link": "tnxn8nO8QWo"
+    },
+    {
+      "name": "Obsetileo's Top 5 Paladins Plays | Obsetileo 2022 Recap | Obsetileo",
+      "link": "EDtP1rvstZ8"
+    },
+    {
+      "name": "Paladins: Siege - Solo Killing w/ Vora | No Commentary Gameplay | Obsetileo",
+      "link": "e6P1Ego7PKA"
+    },
+    {
+      "name": "Runaway Baby x Bang Bang - Bruno Mars & K'NAAN ft. Adam Levine [MASHUP] | MacJMisc",
+      "link": "rWMrFFryQy4"
+    },
+    {
+      "name": "A Fox's Reflection - REMAKE (Volpina VS Ying) [Miraculous Ladybug VS Paladins] | MacJMisc",
+      "link": "ozJEllGlC1w"
+    },
+    {
+      "name": "Darkness Ablaze Pack Opening #5 - Pokemon TCG | MacJPulls",
+      "link": "oABAbl4lYsA"
+    },
+    {
+      "name": "Silver Tempest Pack Opening #2 - Pokemon TCG | MacJPulls",
+      "link": "GCUNfZqae88"
+    }
+  ]
+};
+
 const randomVidContainer = document.querySelector('.random-video');
 var videoList = data['videos'];
 /*
@@ -77,12 +182,16 @@ req.onreadystatechange = () => {
   }
 };*/
 
+newVideo();
 const randomButton = document.querySelector("#randomButton");
-randomButton.addEventListener("click", () => { 
+randomButton.addEventListener("click", newVideo);
+
+function newVideo() { 
 	var a = Math.floor(Math.random() * videoList.length);
 	randomVidContainer.innerHTML = "<h3>"+videoList[a]['name']+"</h3>"+//<a style='text-decoration: none; color:black' href='https://youtu.be/"+videoList[a]['link']+"'>Watch Here</a></br>"+
 	'<iframe width="560" height="560" src="https://www.youtube.com/embed/'+videoList[a]['link']+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
-});
+}
+
 /*
 req.open("GET", "https://api.jsonbin.io/v3/b/654a7abb12a5d376599630e6/latest", true);
 req.setRequestHeader("X-Access-Key", "$2a$10$7V8rdmDR5yINKSL07ixq/ORz2fYnIGHnv9C/dFK1/hJY/0eCvL/VW");
