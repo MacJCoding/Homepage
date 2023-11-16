@@ -189,16 +189,16 @@ function getInput() {
 	var sent = false;
 	var x = document.getElementById("feedback").value;
 	var f = document.getElementById("feedbackForm");
-	//document.getElementById("demo").innerHTML = x;
+	var t = document.getElementById("textArea");
 	console.log("press");
 	if(x!=null && x!="")
 	{
 		formButton.removeEventListener("click", getInput);
-		f.innerHTML='<p>Thank you for your feedback!</p>';
 		let req = new XMLHttpRequest();
-	
+		t.innerHTML='<p>'+x+'</p>'
 		req.onreadystatechange = () => {
 		if (req.readyState == XMLHttpRequest.DONE && !sent) {
+			f.innerHTML='<p>Thank you for your feedback!</p>';
 			sent = true;
 			console.log(req.responseText);
 			var arr = JSON.parse(req.responseText)['record'];
