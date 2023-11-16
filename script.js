@@ -188,10 +188,13 @@ formButton.addEventListener("click", getInput);
 function getInput() {
 	var sent = false;
 	var x = document.getElementById("feedback").value;
+	var f = document.getElementById("feedbackForm");
 	//document.getElementById("demo").innerHTML = x;
 	console.log("press");
 	if(x!=null && x!="")
 	{
+		formButton.removeEventListener("click", getInput);
+		f.innerHTML='<p>Thank you for your feedback!</p>';
 		let req = new XMLHttpRequest();
 	
 		req.onreadystatechange = () => {
