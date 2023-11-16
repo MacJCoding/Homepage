@@ -171,16 +171,6 @@ var data = {
 
 const randomVidContainer = document.querySelector('.random-video');
 var videoList = data['videos'];
-/*
-let req = new XMLHttpRequest();
-
-
-req.onreadystatechange = () => {
-  if (req.readyState == XMLHttpRequest.DONE) {
-	videoList = JSON.parse(req.responseText)['record']['videos'];
-	newVideo();
-  }
-};*/
 
 newVideo();
 const randomButton = document.querySelector("#randomButton");
@@ -192,8 +182,45 @@ function newVideo() {
 	'<iframe width="560" height="560" src="https://www.youtube.com/embed/'+videoList[a]['link']+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
 }
 
-/*
-req.open("GET", "https://api.jsonbin.io/v3/b/654a7abb12a5d376599630e6/latest", true);
-req.setRequestHeader("X-Access-Key", "$2a$10$7V8rdmDR5yINKSL07ixq/ORz2fYnIGHnv9C/dFK1/hJY/0eCvL/VW");
-req.send();*/
+const formButton = document.querySelector("#formButton");
+formButton.addEventListener("click", getInput);
+
+function getInput() {
+	var sent = false;
+	var x = document.getElementById("feedback").value;
+	//document.getElementById("demo").innerHTML = x;
+	console.log("press");
+	if(x!=null && x!="")
+	{
+		let req = new XMLHttpRequest();
+	
+		req.onreadystatechange = () => {
+		if (req.readyState == XMLHttpRequest.DONE && !sent) {
+			sent = true;
+			console.log(req.responseText);
+			var arr = JSON.parse(req.responseText)['record'];
+			req.open("PUT", "https://api.jsonbin.io/v3/b/6556282312a5d376599a5753", true);
+			req.setRequestHeader("Content-Type", "application/json");
+			req.setRequestHeader("X-ACCESS-Key", "$2a$10$tMemtnV.mNFKoAnPZAWL7e25TdEbqyfCd9by6B5edy1SR04j22e66");
+			console.log(arr);
+			arr.push({feedback: x});
+			var s = "[";
+			for (let i = 0; i < arr.length; i++) {
+				s += '{"feedback":"'+arr[i].feedback+'"}';
+				if(i!=arr.length-1)
+					s+=",";
+			}
+			s+="]";
+			req.send(s);
+			console.log(s);
+		}
+		};
+		
+		req.open("GET", "https://api.jsonbin.io/v3/b/6556282312a5d376599a5753/latest", true);
+		req.setRequestHeader("X-ACCESS-Key", "$2a$10$tMemtnV.mNFKoAnPZAWL7e25TdEbqyfCd9by6B5edy1SR04j22e66");
+		req.send();
+	}
+}
+
+
 
