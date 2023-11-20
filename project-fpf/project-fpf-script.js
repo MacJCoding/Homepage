@@ -158,9 +158,6 @@ const left = document.querySelector("#left_arrow");
 left.addEventListener("click", preivousHero);
 const right = document.querySelector("#right_arrow");
 right.addEventListener("click", nextHero);
-document.querySelector(".play").addEventListener("click", () => {
-  document.querySelector("#unity-container").scrollIntoView(false);
-});
 
 setInterval(update, 1);
 

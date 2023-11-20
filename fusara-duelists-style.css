@@ -1,0 +1,78 @@
+#summary {
+  justify-content: space-between;
+  color: white;
+  padding-bottom: 50px;
+  padding-top: 150px;
+  position: relative;
+}
+
+#info {
+  background: url(https://img.itch.zone/aW1nLzUyNDk1NTUucG5n/original/6Xiz6E.png);
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#peek {
+  background-attachment: fixed;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#keywords {
+   background: url(https://img.itch.zone/aW1nLzUyNDk1NTUucG5n/original/6Xiz6E.png);
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.keyword {
+	cursor: pointer;
+	padding: 10px;
+	background-color: #DDD;
+}
+
+#game {
+	background-color: #112;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+body {
+  background-color: #0b487f;
+}
+
+.heroImg,
+.sneakPeek {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#className {
+  text-align: center;
+}
+
+#classDesc {
+  text-align: center;
+}
+
+.imgColumn {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/*mobile landscape*/
+@media (max-height: 500px) {
+	#summary{
+		padding-top: 100px;
+	}
+	
+}
