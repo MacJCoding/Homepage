@@ -33,7 +33,6 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 var dropdown = document.getElementsByClassName("sidebar-dropdown-btn");
 var i;
-
 for (i = 0; i < dropdown.length; i++) {
   dropdown[i].addEventListener("click", function() {
     

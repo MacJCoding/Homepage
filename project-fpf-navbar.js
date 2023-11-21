@@ -5,7 +5,7 @@ document.querySelector(".nav").innerHTML =
 '<ul class="tabs">'+
 '<li class="tab"><a class="link" href="index.html">Home</a></li>'+
 '<li class="tab, dropdown">'+
-	'<div  class="dropbtn">All Games</div>'+
+	'<div  class="dropbtn">All&nbsp;Games</div>'+
 	'<div class="dropdown-content">'+
 		'<a class="link" href="fusara-duelists.html">Fusara Duelists</a>'+
 		'<a class="link" href="project-fpf.html">Project FPF</a>'+
@@ -21,7 +21,7 @@ if(document.querySelector(".sidebar")!=null)
 document.querySelector(".sidebar").innerHTML = 
 '<h1 class="closebtn, sidebox" class="open-tab" onclick="closeNav()">&times</h1>'+
 '<a class = "sidebox" class="link" href="index.html">Home</a>'+
-'<div class="sidebar-dropdown-btn">All Games</div><div class="sidebar-dropdown-container">'+
+'<div class="sidebar-dropdown-btn">All&nbsp;Games</div><div class="sidebar-dropdown-container">'+
 	'<a class = "sidebox" class="link" href="fusara-duelists.html">Fusara&nbsp;Duelists</a>'+
 	'<a class = "sidebox" class="link" href="project-fpf.html">Project&nbsp;FPF</a>'+
 '</div>'+
