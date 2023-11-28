@@ -207,16 +207,16 @@ function getInput() {
 			req.setRequestHeader("X-ACCESS-Key", "$2a$10$tMemtnV.mNFKoAnPZAWL7e25TdEbqyfCd9by6B5edy1SR04j22e66");
 			console.log(arr);
 			arr.push({feedback: x});
-			var s = "[";
+			/*var s = "[";
 			for (let i = 0; i < arr.length; i++) {
 				s += '{"feedback":"'+arr[i].feedback+'"}';
 				if(i!=arr.length-1)
 					s+=",";
 			}
 			s+="]";
-			req.send(s);
-			//req.send(s.stringify);
-			console.log(s);
+			req.send(s);*/
+			req.send(JSON.stringify(arr));
+			console.log(JSON.stringify(arr));
 		}
 		};
 		

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>0.5.0 Patch Notes - Project FPF</title>
+  <meta name = "viewport" content = "width=device-width, initial-scale = 1">
+  <link rel="stylesheet" href="../project-fpf/fpf-patch-notes-style.css">
+  <link rel="stylesheet" href="../default.css">
+	<link rel="icon" href="../logo.ico">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<video autoplay loop class="back-video" muted plays-inline>
+		<source src = "../new-outro.mp4" type="video/mp4"/>
+	</video>
+<body>
+<div class="nav"></div>
+<div id="mySidebar" class="sidebar"></div>
+
+<div id = "main" style="zoom:0.9">	
+  <div id="devlog">
+    <div class="container-wide hidden">
+      <div class="box">
+        <div>
+			<h1>0.5.0 Patch Notes - (Ilia and Events)</h1>
+			<h3>September 2, 2023</h3>
+			</br>
+			<p><i>Note: Not all notes are present and there are notes that may not be worked on in the future</i></p>
+			<a class="next-devlog" style = "width:48%" href = "project-fpf-0-4-1.html">
+				Previous Patch Notes
+			<a class="next-devlog" style = "width:48%" href = "project-fpf-0-6-0.html">
+				Next Patch Notes
+			</a>
+			<h2>Card Updates: </h2>
+			<ul>
+				<li>Added <i>Ilia, The Huntress</i></li>
+				<ul>
+					<li>Points: 4</li>
+					<li><b>On-Summon:</b> Destroy a random enemy summon</li>
+				</ul>
+				<img style="max-width: 350px; min-width: 250px; width: 40%" src="../media/project-fpf/IliaTheHuntress.png">
+				<li>Added <i>Personal Mentor</i></li>
+				<ul>
+					<li>Points: 6</li>
+					<li><b>Burst:</b> Destroy this and a random enemy summon</li>
+				</ul>
+				<img style="max-width: 350px; min-width: 250px; width: 40%" src="../media/project-fpf/PersonalMentor.png">
+				<li>Added <i>Weapon Repairsman</i></li>
+				<ul>
+					<li>Points: 5</li>
+					<li><i>You can only play this if you control at least 1 summon</i> <b>Burst:</b> Destroy a random friendly summon</li>
+				</ul>
+				<img style="max-width: 350px; min-width: 250px; width: 40%" src="../media/project-fpf/WeaponRepairsman.png">
+				<li>Added <i>Insider Spy</i></li>
+				<ul>
+					<li>Points: 0</li>
+					<li><b>On-Summon:</b> Give a random enemy summon -2 Points</li>
+				</ul>
+				<img style="max-width: 350px; min-width: 250px; width: 40%" src="../media/project-fpf/InsiderSpy.png">
+				<li>Added <i>Hero-In-Training</i></li>
+				<ul>
+					<li>Points: 2</li>
+					<li><b>Aura:</b> Whenever you <b>Burst</b>, destroy all adjecent summons from this</li>
+				</ul>
+				<img style="max-width: 350px; min-width: 250px; width: 40%" src="../media/project-fpf/HeroInTraining.png">
+				<li>Added <i>Archer Trainer</i></li>
+				<ul>
+					<li>Points: 1</li>
+					<li><b>On-Summon:</b>  Give 4 random squares <b>Boost +2</b></li>
+				</ul>
+				<img style="max-width: 350px; min-width: 250px; width: 40%" src="../media/project-fpf/ArcherTrainer.png">
+				<li>Added <i>Citizen</i></li>
+				<ul>
+					<li>Points: 1</li>
+					<li><b>KO:</b>  Give all squares <b>Boost -3</b></li>
+				</ul>
+				<img style="max-width: 350px; min-width: 250px; width: 40%" src="../media/project-fpf/Citizen.png">
+				<li>Added <i>Criminal</i></li>
+				<ul>
+					<li>Points: -2</li>
+					<li><b>KO:</b> Give all squares you control <b>Boost +3</b></li>
+				</ul>
+				<img style="max-width: 350px; min-width: 250px; width: 40%" src="../media/project-fpf/Criminal.png">
+				<li>Added <i>Shop Owner</i></li>
+				<ul>
+					<li>Points: 1</li>
+					<li><b>Burst:</b> Give all summons you control  +2 Points</li>
+				</ul>
+				<img style="max-width: 350px; min-width: 250px; width: 40%" src="../media/project-fpf/ShopOwner.png">
+				<li>Added <i>Aiki - The Space Guardian</i></li>
+				<ul>
+					<li>Points: 2</li>
+					<li><b>Burst:</b> Change the current event</li>
+				</ul>
+				<img style="max-width: 350px; min-width: 250px; width: 40%" src="../media/project-fpf/AikiTheSpaceGuardian.png">
+				<li>Added <i>Dark Separona</i></li>
+				<ul>
+					<li>Points: 7</li>
+					<li><i>You can only play this if you control at least 3 summons</i> <b>On-Summon:</b> Destroy all your other summons</li>
+				</ul>
+				<img style="max-width: 350px; min-width: 250px; width: 40%" src="../media/project-fpf/DarkSeparona.png">
+				<li>Added <i>The Living Mountain</i></li>
+				<ul>
+					<li>Points: 10</li>
+					<li><b>Delay:</b> (6)</li>
+				</ul>
+				<img style="max-width: 350px; min-width: 250px; width: 40%" src="../media/project-fpf/TheLivingMountain.png">
+				<li>Adjusted <i>Shieldbearer</i></li>
+				<ul>
+					<li><u>Old:</u> <b>Aura:</b> This cannot be destroyed</li>
+					<li><u>New:</u> <u><b>Delay:</b> (2)</u> <b>Aura:</b> This cannot be destroyed
+					<li><b>Notes:</b> This was to tune <i>Shieldbearer</i> down a bit to counter its very strong aura effect.</li>
+				</ul>
+				<img style="max-width: 350px; min-width: 250px; width: 40%" src="../media/project-fpf/Shieldbearer.png">
+			</ul>
+			</br>
+			<h2>NEW:</h2>
+			<ul>
+				<li>Added new Mechanic - <b>Delay</b></li>
+					<ul><li><b>Delay:</b> (x) means a card is unplayable in hand until x reaches zero. At the start of each turn, decrease x by 1.</li></ul>
+				<li>Added <i>Ilia, The Huntress</i> Preset Deck</li>
+				<li>Added <i>Events</i> that put into play twice per game</li>
+				<ul>
+					<li>Apocalypse</li>
+						<ul><li>Destroy all summons</li></ul>
+					<li>Buffering</li>
+						<ul><li>Change to a NEW event next round</li></ul>
+					<li>Burrow Malfunction</li>
+						<ul><li>Add <i>Aiki - The Space Guardian</i> to each player's hand</li></ul>
+					<li>City Parade</li>
+						<ul><li>Summon a <i>Criminal</i> and <i>Citizen</i> for both players</li></ul>
+					<li>Explosion at Great Towers of Parjing</li>
+						<ul><li>Remove all <b>Boosts</b> from all squares</li></ul>
+					<li>Fall Migration</li>
+						<ul><li>Summon 3 <i>Pigeons</i> for both players</li></ul>
+					<li>Gentle Breeze</li>
+						<ul><li>Give all summons currently in play <b>Boost +1</b></li></ul>
+					<li>Hawaiian Festival</li>
+						<ul><li>All <b>Burst</b> effects don't trigger</li></ul>
+					<li>Ivina Tournament</li>
+						<ul><li>Shuffle 3 Elite cards to both players deck</li></ul>
+					<li>Landslide</li>
+						<ul><li>Summon <i>The Living Mountain</i> for both players</li></ul>
+					<li>Lockdown</li>
+						<ul><li>Summon <i>Shieldbearer</i> for both players</li></ul>
+					<li>Metalwork Commission</li>
+						<ul><li>Summons on squares with no <b>Boosts</b> have +3 Power</li></ul>
+					<li>Ribben Rose Invitational</li>
+						<ul><li>At the end of your turn, give your summons <b>Boost +1</b></li></ul>
+					<li>Ripple In Time</li>
+						<ul><li>The game ends after this round</li></ul>
+					<li>Romdon Festival</li>
+						<ul><li>Fill both players' hand with random cards</li></ul>
+					<li>Spring Migration</li>
+						<ul><li>At the end of your turn, add a <i>Pigeon</i> to your hand</li></ul>
+					<li>Sunny Day</li>
+						<ul><li><i>Clear Skies</i></li></ul>
+					<li>Town Square</li>
+						<ul><li>Replace both players decks with 10 random cards </li></ul>
+					<li>Tsunami</li>
+						<ul><li>Both players draws 3 cards and their deck is washed away</li></ul>
+				</ul>
+			</ul>
+			</br>
+			<h2>Updates:</h2>
+			<ul>
+				<li>Cards in the collection now preview cards that are associated with them</li>
+				<li>Deck building now starts with selecting an Elite card before choosing other cards</li>
+				<li>Added animations delays in cards are summoned</li>
+				<li>Changed in-game UI to where players can view the cards by right-clicking the card or summon. This is to avoid cluttering the gameplay.</li>
+				<li>Changed the End Turn button only to appear if the player cannot play a card at all, thus players must play at least one card per turn.</li>
+				<li>Squares on the board now change colors if the collective Boosts on it is either positive (green) or negative (yellow)</li>
+				<li>Added points now show where they originated from - other summons, auras, or events</li>
+				<li>Summons now show their points in red if it is below the summons’ original points</li>
+				<li>Total points now show on the side of the board rather than near the players’ names </li>
+				<li>Changed Lobby UI to add “more flare”</li>
+			</ul>
+			</br>
+			<h2>Bug Fixes:</h2>
+			<ul>
+				<li>Fixed issues when lobby would snap to appear rather than with transition</li>
+				<li>Metal Knight now works as intended</li>
+				<li>Players now have the intended max hand size of 7</li>
+			</ul>
+			</br>
+			<a class="next-devlog" style = "width:48%" href = "project-fpf-0-4-1.html">
+				Previous Patch Notes
+			<a class="next-devlog" style = "width:48%" href = "project-fpf-0-6-0.html">
+				Next Patch Notes
+			</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<button class="to-top">To Top</button>
+<!-- partial -->
+<script  src="./fpf-patchnotes-navbar.js"></script>
+<script  src="../default.js"></script>
+
+	</div>
+</body>
+</html>

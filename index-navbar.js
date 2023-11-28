@@ -11,6 +11,7 @@ document.querySelector(".nav").innerHTML =
 		'<a class="link" href="project-fpf.html">Project FPF</a>'+
 	'</div>'+
 '</li>'+
+'<li class="tab"><a class="link" href="https://macjcoding.itch.io">Game&nbsp;Jam&nbsp;Games</a></li>'+
 '<li class = "tab-icon"><a href="https://macjcoding.itch.io"><image src="https://assets.ifttt.com/images/channels/586796884/icons/monochrome_large.png" style="width:30px"></a></li>'+
 '<li class = "tab-icon"><a href="https://www.youtube.com/@macjcoding"><image src="https://static-00.iconduck.com/assets.00/youtube-icon-512x359-dyeyi1hm.png" style="width:30px"></a></li>'+
 '<li class = "tab-icon"><a href="https://github.com/MacJCoding"><image src="https://static-00.iconduck.com/assets.00/github-icon-2048x1988-jzvzcf2t.png" style="width:30px"></a></li></ul>'
@@ -23,6 +24,7 @@ document.querySelector(".sidebar").innerHTML =
 	'<a class = "sidebox" class="link" href="fusara-duelists.html">Fusara&nbsp;Duelists</a>'+
 	'<a class = "sidebox" class="link" href="project-fpf.html">Project&nbsp;FPF</a>'+
 '</div>'+
+'<a class = "sidebox" class="link" href="https://macjcoding.itch.io">Game&nbsp;Jam&nbsp;Games</a>'+
 '<div class="sidebar-dropdown-btn">Sites</div><div class="sidebar-dropdown-container">'+
 	'<a class="sidebox" class="link" href="https://macjcoding.itch.io">itch.io</a>'+
 	'<a class="sidebox" class="link" href="https://www.youtube.com/@macjcoding">Youtube</a>'+
