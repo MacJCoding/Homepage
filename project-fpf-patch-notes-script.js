@@ -20,6 +20,7 @@ class PatchNotes {
 }
 
 const listings = [
+	new PatchNotes("0.7.2 - Deck Balancing", "December 12, 2023", "project-fpf-0-7-2.html",""),
 	new PatchNotes("0.7.1 - Deck Code Hotfix", "November 20, 2023", "project-fpf-0-7-1.html",""),
 	new PatchNotes("0.7.0 - User Experience Modifications", "November 19, 2023", "project-fpf-0-7-0.html",""),
 	new PatchNotes("0.6.0 - Blitz Mode", "October 24, 2023", "project-fpf-0-6-0.html",""),
