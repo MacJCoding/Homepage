@@ -40,6 +40,17 @@
 	background-color: #888;
 }
 
+.next-devlog{
+	background-color: rgba(100, 100, 255, 0.4);
+	font-size: 190%;
+	padding: 1%;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	margin: 1%;
+}
+
 .form {
   text-align: center;
   padding-top: 50px;

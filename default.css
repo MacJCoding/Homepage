@@ -91,6 +91,13 @@ a:hover {
 	opacity: 0.5;
 }
 
+.gameLink {
+	padding: 10px;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+}
+
 .fade-in {
 	animation: fadeIn, 2s;
 }

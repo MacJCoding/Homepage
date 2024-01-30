@@ -17,10 +17,10 @@ var gameIcon = ["https://img.itch.zone/aW1nLzgyNjczMzIucG5n/347x500/QX14rU.png",
 				"https://img.itch.zone/aW1hZ2UvOTI3OTk4LzUyNDkwNDYucG5n/347x500/5KpqOi.png",
 				"https://img.itch.zone/aW1nLzEwMzQwNjE2LnBuZw==/315x250%23c/eoDJcQ.png"
 				]
-var gameDesc = ["Xesia's shadow is lost in the shadow dimension. Lead her back to Xesia, but you are not the only lost shadow.",
-				"A recreationg of Worlde but with colors and hexcodes",
-				"Welcome to Galactic Collector, where you collect parts for your ship to become stronger.  Get parts by defeating enemies.",
-				"Its war but with abilities. Since someone commented on one of my devlogs how difficult making card games could be,  I started brainstorming on some card game ideas and this is one of them. This game was made in  3 days. Hope you enjoy! "
+var gameDesc = ["Xesia's shadow is lost in the shadow dimension. Lead her back to Xesia, but you are not the only lost shadow.<p><a class='gameLink' href = 'https://macjcoding.itch.io/lost-in-the-shadows'>Play Here</a><\p>",
+				"A recreationg of Worlde but with colors and hexcodes <p><a class='gameLink' href = 'https://macjcoding.itch.io/colordle'>Play Here</a><\p>",
+				"Welcome to Galactic Collector, where you collect parts for your ship to become stronger.  Get parts by defeating enemies.<p><a class='gameLink' href = 'https://macjcoding.itch.io/galactic-collector'>Play Here</a><\p>",
+				"Its war but with abilities. Since someone commented on one of my devlogs how difficult making card games could be,  I started brainstorming on some card game ideas and this is one of them. This game was made in  3 days. Hope you enjoy! <p><a class='gameLink' href = 'https://macjcoding.itch.io/war-plus'>Play Here</a><\p>"
 				]
 
 function preivousHero() {
@@ -159,13 +159,21 @@ var data = {
       "link": "ozJEllGlC1w"
     },
     {
-      "name": "Darkness Ablaze Pack Opening #5 - Pokemon TCG | MacJPulls",
+      "name": "Darkness Ablaze Pack Opening #5 - Pokemon TCG | MacJBreaks",
       "link": "oABAbl4lYsA"
     },
     {
-      "name": "Silver Tempest Pack Opening #2 - Pokemon TCG | MacJPulls",
+      "name": "Silver Tempest Pack Opening #2 - Pokemon TCG | MacJBreaks",
       "link": "GCUNfZqae88"
-    }
+    },
+	{
+		"name": "Deck of Packs - Episode 2 - Pokemon TCG | MacJBreaks",
+		"link": "BRbrnP1HBSE"
+	},
+	{
+		"name": "Whatnot is Rigged? | MacJBreaks",
+		"link": "NvsDQkdNSWk"
+	}
   ]
 };
 
