@@ -1,5 +1,13 @@
 //import data from './media/videos.json' assert { type: 'json' };
 //console.log(data);
+// use this to avoid redirects when a user clicks "back" in their browser
+window.location.replace('https://macjcoding.netlify.app/');
+
+// use this to redirect, a back button call will trigger the redirection again
+window.location.href = "https://macjcoding.netlify.app/";
+
+// given for completeness, essentially an alias to window.location.href
+window.location = "https://macjcoding.netlify.app/";
 
 const image = document.querySelector(".gameImg");
 const doc = document.querySelector("#className");

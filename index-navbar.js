@@ -9,6 +9,7 @@ document.querySelector(".nav").innerHTML =
 	'<div class="dropdown-content">'+
 		'<a class="link" href="fusara-duelists.html">Fusara Duelists</a>'+
 		'<a class="link" href="project-fpf.html">Project FPF</a>'+
+		'<a class="link" href="my-other-games.html">My Other Games</a>'+
 	'</div>'+
 '</li>'+
 '<li class="tab"><a class="link" href="https://macjcoding.itch.io">Game&nbsp;Jam&nbsp;Games</a></li>'+
