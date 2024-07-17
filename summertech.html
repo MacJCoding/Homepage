@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8">
+		<title>Treasure Hunt | SummerTech</title>
+		<meta name = "viewport" content = "width=device-width, initial-scale = 1">
+		<link rel="stylesheet" href="./default.css">
+		<link rel="icon" href="logo.ico">
+	</head>
+	<body style = "background-image: url('media/beach.jpeg')">
+		<div id="welcome" style= "padding-top:3%">
+			<div class="container">
+				<div class="box">
+					<div>
+						<h3 class = "title">The Pirates VS The Levyathan Navy</h3>
+					</div>
+					<button class="next" style="
+						border-radius: 26.5px;
+						background-color: #BBE;
+						border: 3px solid #001f61;
+						box-shadow: 0 16px 22px -17px #03153b;
+						color: #004;
+						cursor: pointer;
+						font-size: 20px;
+						line-height: 20px;
+						padding: 12px 20px;"><b>Submit</b></button>
+					<div style= "content: "";display: table; clear: both;">
+						<div style = "float: left; width: 50%;">	
+							<h3 style = "color: #BC1425"> The Pirates </h3>
+							<div style = "margin:5%; background-color:#FFE2BB">
+								<div class = "pirateBar" style=" background-color:#BC1425;height:24px;width:1%"></div>
+							</div>
+							<div class = "pirateCodes"></div>
+							<textarea type="text" id="pirateInput" style="padding-top: 10px; font-size: 20px; text-align: center; width: 70%; min-height: 100px; resize: none"></textarea>
+						</div>
+						<div style = "float: left; width: 50%;">	
+							<h3 style = "color: #4B548B"> Levyathan Navy </h3>
+							<div style = "margin:5%;  background-color:#FFE2BB">
+								<div class = "navyBar" style="background-color:#4B548B;height:24px;width:1%"></div>
+							</div>
+							<div class = "navyCodes"></div>
+							<textarea type="text" id="navyInput" style="padding-top: 10px; font-size: 20px; text-align: center; width: 70%; min-height: 100px; resize: none"></textarea>
+						</div>
+					</div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script  src="./summertech.js"></script>
+</html>
